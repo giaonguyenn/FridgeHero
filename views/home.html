@@ -1,11 +1,11 @@
 <section class="input-page">
 	<div class="input-field" id="home-input">
 	    <h3>What are we cooking with?</h3>
-	    <input type="text" id="searchTerm1" ng-model="searchTerm1" placeholder="Ingredient 1">
+	    <input ng-class="{redBorder:tryAgain}" type="text" id="searchTerm1" ng-model="searchTerm1" ng-change="enableButton()" placeholder="Ingredient 1">
 		<input type="text" id="searchTerm2" ng-model="searchTerm2" placeholder="Ingredient 2">
 		<input type="text" id="searchTerm3" ng-model="searchTerm3" placeholder="Ingredient 3">
 		</br>
-		<button type="button" id="submitIngredients" ng-click="getRecipes(searchTerm1,searchTerm2,searchTerm3)" ui-sref="recipes">Let's Cook!</button>
+		<button type="button" id="letsCookButton" ng-click="getRecipes(searchTerm1,searchTerm2,searchTerm3)">Let's Cook!</button>
 	</div>
 
 </section>

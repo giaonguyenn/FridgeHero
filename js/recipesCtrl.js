@@ -1,4 +1,4 @@
-angular.module('app').controller('recipesCtrl', function($scope, mainSrvc){
+angular.module('app').controller('recipesCtrl', function($scope, mainSrvc, $state){
 	angular.element(document).ready(function(){
     	$('.modal').modal();
   	});
@@ -15,9 +15,11 @@ angular.module('app').controller('recipesCtrl', function($scope, mainSrvc){
 				$scope.show = true;
 			}
 		);	
-	} else {
-		$("#searchTerm1").css("border", "solid 1px red");
+	} 
+	else {
+		$state.go("home")
 	}
+
 	$scope.selectRecipe = function(recipe){
 
 		//go get the infomation
