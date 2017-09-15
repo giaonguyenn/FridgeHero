@@ -14,7 +14,7 @@ angular.module('app').controller('recipesCtrl', function($scope, mainSrvc,$timeo
 				$scope.first = searchTerm1;
 				$scope.second = searchTerm2;
 				$scope.third = searchTerm3;
-				var timeToWait = 2000 - (newTime - startTime)
+				var timeToWait = 2000 - (newTime - startTime);
 				$timeout(function(){
 					angular.element(document.querySelector("#loading-gif")).remove();
 					$scope.show = true;
@@ -23,15 +23,17 @@ angular.module('app').controller('recipesCtrl', function($scope, mainSrvc,$timeo
 		);	
 	} 
 	else {
-		$state.go("home")
+		$state.go("home");
 	}
 
 	$scope.selectRecipe = function(recipe){
-
-		//go get the infomation
-		// and THEN open the modal, and inject the values
+		mainSrvc.getIngredients(recipe.recipe_id).then(function(response) {
 		$('#modal1').modal('open');
 		$('#title').text(recipe.title);
-		$("#ingredients").text(recipe.recipe_id);
-	}
+		$("#ingredients").empty();
+			response.ingredients.forEach(function(cur){
+				$("#ingredients").append("<p>"+ cur +"</p>");	
+			});
+		});
+	};
 });
