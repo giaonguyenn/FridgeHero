@@ -16,8 +16,10 @@ angular.module('app').controller('recipesCtrl', function($scope, mainSrvc,$timeo
 				$scope.third = searchTerm3;
 				var timeToWait = 2000 - (newTime - startTime);
 				$timeout(function(){
-					angular.element(document.querySelector("#loading-gif")).remove();
+					angular.element(document.querySelector(".loading")).remove();
 					$scope.show = true;
+					$("#now-showing").css("display", "none");
+					// $("#noMatchesMessage").css("display", "initial");
 				}, timeToWait); 
 			}
 		);	
@@ -25,6 +27,8 @@ angular.module('app').controller('recipesCtrl', function($scope, mainSrvc,$timeo
 	else {
 		$state.go("home");
 	}
+
+	$("#noMatchesMessage").css("display", "none !important");
 
 	$scope.selectRecipe = function(recipe){
 		mainSrvc.getIngredients(recipe.recipe_id).then(function(response) {

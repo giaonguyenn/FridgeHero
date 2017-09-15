@@ -1,12 +1,18 @@
 <section class="mid_container" ng-model="show">
-	<div class="loading" ng-if="!show" >
-      	<img id="loading-gif" src="https://media.giphy.com/media/l39765g6zcASQXGMg/giphy.gif"/>
+	<div class="loading">
+      	<img id="loading-gif" src="https://media.giphy.com/media/l39765g6zcASQXGMg/giphy.gif"/> </br>
+      	<p>Loading yummy goodness...</p>
   	</div>
 
 	<div ng-show="show" id="new-search">
 		<button type="button" ui-sref="home">New Search</button> </br>
 
-		<p ng-show="show && first">Now showing yummy noms with {{first}}<span ng-show="second && show">, {{second}}</span><span ng-show="third && show">, {{third}}</span></p>
+		<p id="now-showing" ng-show="show && first">Now showing yummy noms with {{first}}<span ng-show="second && show">, {{second}}</span><span ng-show="third && show">, {{third}}</span></p>
+	</div>
+
+	<div id="noMatchesMessage">
+		<p>"No recipes found. Please try again or order from your nearest Dominoes."</p>
+		<img src="https://media.giphy.com/media/ETTzs1c6mS36g/giphy.gif" alt="hamster eating pizza"/>
 	</div>
 
 	<div ng-show="show" class="recipe-display" ng-repeat="recipe in recipes">
