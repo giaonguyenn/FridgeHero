@@ -1,13 +1,20 @@
-<section>
-	<button id="new-search" type="button" ui-sref="home">New Search</button> </br>
+<section ng-model="show">
+	<div class="loading" ng-if="!show" >
+      	<img id="loading-gif" src="https://media.giphy.com/media/l39765g6zcASQXGMg/giphy.gif"/>
+  	</div>
 
-	<p ng-show="show && first">Now showing yummy noms with {{first}}<span ng-show="second && show">, {{second}}</span><span ng-show="third && show">, {{third}}</span></p>
+	<div ng-show="show" id="new-search">
+		<button type="button" ui-sref="home">New Search</button> </br>
 
-	<div class="recipe-display" ng-repeat="recipe in recipes">
+		<p ng-show="show && first">Now showing yummy noms with {{first}}<span ng-show="second && show">, {{second}}</span><span ng-show="third && show">, {{third}}</span></p>
+	</div>
+
+	<div ng-show="show" class="recipe-display" ng-repeat="recipe in recipes">
 			{{recipe.title}}-{{recipe.recipe_id}} </br>
 			<a ng-click="selectRecipe(recipe)" class="waves-effect waves-light btn"><img id="recipe-images" ng-src={{recipe.image_url}}></a>
 
 	</div>
+
 	<div id="modal1" class="modal">
     	<div class="modal-content">
       		<h4 id="title"></h4>

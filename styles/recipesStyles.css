@@ -1,4 +1,32 @@
+.loading {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#loading-gif {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	position: center;
+}
+
+#new-search {
+	position: fixed;
+	margin-left: -20px;
+	top: 80px;
+	width: 100vw;
+	background-color: white;
+	z-index: 10;
+	text-align: center;
+}
+
+.recipe-display {
+	position: relative;
+	top: 55px;
+	z-index: 1;
+}
 
 #recipe-images {
 	width: 500px;
+	height: 500px;
 }

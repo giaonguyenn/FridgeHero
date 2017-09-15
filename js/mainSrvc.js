@@ -12,6 +12,10 @@ angular.module("app").service("mainSrvc", function($http) {
 	};
 
 	this.getRecipes = function(searchTerm1,searchTerm2,searchTerm3){
+		// setTimeout(function(){
+		// 			angular.element(document.querySelector("#loading-gif")).remove();
+		// 			this.show = true;
+		// 		}, 2000);
 		return $http
 		.get(baseUrl + "search?key=" + apiKey + "&q=" + searchTerm1 + "," + searchTerm2 + "," + searchTerm3)
 		.then(function(response) {

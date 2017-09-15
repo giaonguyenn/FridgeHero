@@ -17,25 +17,12 @@
 
 	</head>
 
-	<body>
-		<div class="navbar">
-	    	<div class="logo-position">
-	    		<a href=""><img class="logo" src="http://icons.iconarchive.com/icons/sonya/swarm/256/Fast-Food-icon.png" alt="Fridge Hero"/></a>
-	    	</div>
-	    	<div class="menu">
-		    	<ul>
-		    		<a ui-sref="home"><li>Home</li></a>
-		    		<a ui-sref="randomGenerator"><li>Random Generator</li></a>
-		    		<a ui-sref="about"><li>About</li></a>
-		    	</ul>
-	    	</div>
-	    </div>
+	<body ng-controller="mainCtrl">
+		<navbar-dir></navbar-dir>
 
 	    <ui-view></ui-view>
 
-		<footer>
-			<p>Designed and Developed by: Giao Nguyen</p>
-		</footer>
+		<footer-dir></footer-dir>
 	</body>
 
 	<!--jQuery-->
@@ -54,4 +41,6 @@
 	<script src="js/mainCtrl.js"></script>
 	<script src="js/mainSrvc.js"></script>
 	<script src="js/recipesCtrl.js"></script>
+	<script src="js/navbarDir.js"></script>
+	<script src="js/footerDir.js"></script>
 </html>
