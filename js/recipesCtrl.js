@@ -18,8 +18,10 @@ angular.module('app').controller('recipesCtrl', function($scope, mainSrvc,$timeo
 				$timeout(function(){
 					angular.element(document.querySelector(".loading")).remove();
 					$scope.show = true;
-					$("#now-showing").css("display", "none");
-					// $("#noMatchesMessage").css("display", "initial");
+					if (!response.length) {
+						$("#now-showing").css("display", "none");
+						$("#noMatchesMessage").css("display", "initial");	
+					}
 				}, timeToWait); 
 			}
 		);	

@@ -13,18 +13,13 @@ angular.module("app").service("mainSrvc", function($http) {
 
 	this.getRecipes = function(searchTerm1,searchTerm2,searchTerm3){
 		return $http
-		.get(baseUrl + "search?key=" + apiKey + "&q=" + "black beans")
+		.get(baseUrl + "search?key=" + apiKey + "&q=" + searchTerm1 + "," + searchTerm2 + "," + searchTerm3)
 		.then(function(response) {
-			if (response.data.count === 0) {
-				console.log("hi")
-				
-			} else {
 				return response.data.recipes;
-			}
 		});
 	};
 
-	
+
 
 	this.getIngredients = function(itemId) {
 		return $http.get(baseUrl + "get?key=" + apiKey + "&rId=" + itemId).then(function(response) {
