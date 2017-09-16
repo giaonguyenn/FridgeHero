@@ -10,19 +10,19 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: auto;
-	padding-right: 20px;
-	padding-left: 20px;
+	vertical-align: middle;
+	padding: 10px;
 	background-color: white;
 	position: fixed;
 	top: 0;
 	z-index: 10;
+	color: #58585a;
 }
 
-.logo {
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
+.logo-image {
+	width: 100px;
+	height: 50px;
+	margin-top: 10px;
 }
 
 a {
@@ -33,6 +33,14 @@ a {
 li {
 	display: inline-block;
 	padding: 10px;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+}
+
+li:hover {
+	color: #59CFC9;
+	border-top: 2px solid #59CFC9;
+	border-bottom: 2px solid #59CFC9;
 }
 
 section {
