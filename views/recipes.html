@@ -6,8 +6,15 @@
 
 	<div ng-show="show" id="new-search">
 		<button type="button" ui-sref="home">New Search</button> </br>
+		<!--http://materializecss.com/side-nav.html-->
 
-		<p id="now-showing" ng-show="show && first">Now showing yummy noms with {{first}}<span ng-show="second && show">, {{second}}</span><span ng-show="third && show">, {{third}}</span></p>
+		<p id="now-showing" ng-show="show && first">Now showing yummy noms with 
+		<i>{{first}}</i></span>
+		<span ng-show="second && show">, <i>{{second}}</i></span>
+		<span ng-show="third && show">, <i>{{third}}</i></span>
+		<span ng-show="fourth && show">, <i>{{fourth}}</i></span>
+		<span ng-show="fifth && show">, <i>{{fifth}}</i></span>
+		<span ng-show="sixth && show">, <i>{{sixth}}</i></span></p>
 	</div>
 
 	<div id="noMatchesMessage">
@@ -15,23 +22,38 @@
 		<img src="https://media.giphy.com/media/ETTzs1c6mS36g/giphy.gif" alt="hamster eating pizza"/>
 	</div>
 
-	<div ng-show="show" class="recipe-display" ng-repeat="recipe in recipes">
-			{{recipe.title}}-{{recipe.recipe_id}} </br>
-			<a ng-click="selectRecipe(recipe)" class="waves-effect waves-light"><img id="recipe-images" ng-src={{recipe.image_url}}></a>
-
+	<div class="row" id="recipes">
+		<div ng-show="show" class="recipe-display" ng-repeat="recipe in recipes"> <!--ng-grid="recipe-display"-->
+			<div class="col s4">
+				{{recipe.title}} </br>
+				<a ng-click="selectRecipe(recipe)" class="waves-effect waves-light">
+					<img id="recipe-images" ng-src={{recipe.image_url}}></a>
+			</div>
+		</div>
 	</div>
 
 	<div id="modal1" class="modal">
     	<div class="modal-content">
       		<h4 id="title"></h4>
-
-      		<p id="ingredients">
-      			
-      		</p>
+      		<p id="ingredients"></p>
+      		<img src="" id="images"/>
     	</div>
     	<div class="modal-footer">
-      		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">See Full Instructions</a>
+      		<a class="modal-action modal-close waves-effect waves-green btn-flat" id="source_url" target="_blank">Get to Cooking!</a>
     	</div>
   	</div>
 	
 </section>
+
+<!-- <div class="parallax-container">
+    <div class="parallax"><img src="images/parallax1.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Parallax</h2>
+      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/parallax2.jpg"></div>
+  </div> -->

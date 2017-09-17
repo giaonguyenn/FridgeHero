@@ -1,0 +1,53 @@
+.input-page {
+	background-image: url("https://az616578.vo.msecnd.net/files/2016/03/20/635940407558669684639372263_HN_BB_05_EasyCooking_ProRes_739-img_1280x720.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 91.25vh;
+	width: 100%;
+	text-align: center;
+}
+
+.input-field-background {
+	text-align: center;
+	background-color: white;
+	border-radius: 7px;
+	min-height: 350px;
+	width: 70%;
+	margin: auto;
+	padding: 20px;
+	opacity: .6;
+	z-index: 0;
+}
+
+.input-field h3, input {
+	text-align: center;
+	z-index: 20;
+	opacity: 1.0;
+}
+
+h3 {
+	color: white;
+	font-family: "Unica One", cursive;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+
+input {
+	color: black;
+}
+
+#showMoreButton {
+	margin-top: -25px;
+	margin-bottom: 20px;
+}
+
+#showMoreButton:hover {
+	margin-top: -25px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.additional-input {
+	display: none;
+}

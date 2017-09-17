@@ -2,21 +2,26 @@ body {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	color: #58585a;
+}
+
+.navigation {
+	width: 100%;
 }
 
 .navbar {
-	width: 100%;
+	width: 80%;
 	height: 80px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	vertical-align: middle;
-	padding: 10px;
+	margin-left: 10%;
+/*	margin-right: 100px;*/
+	padding: 5px;
 	background-color: white;
 	position: fixed;
 	top: 0;
 	z-index: 10;
-	color: #58585a;
 }
 
 .logo-image {
@@ -47,21 +52,6 @@ section {
 	width: 100%;
 	margin-top: 80px;
 	padding: 20px;
-}
-
-.input-page {
-	background-image: url("https://az616578.vo.msecnd.net/files/2016/03/20/635940407558669684639372263_HN_BB_05_EasyCooking_ProRes_739-img_1280x720.jpg");
-	background-size: cover;
-	background-position: center;
-	height: 91.25vh;
-}
-
-.input-field {
-	text-align: center;
-}
-
-h3 {
-	color: white;
 }
 
 footer {

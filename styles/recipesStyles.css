@@ -12,6 +12,7 @@
 
 .mid_container{
 	min-height: 92vh;
+	text-align: center;
 }
 
 #noMatchesMessage {
@@ -29,6 +30,11 @@
 	text-align: center;
 }
 
+i {
+	font-style: normal;
+	color: #59CFC9;
+}
+
 .recipe-display {
 	position: relative;
 	top: 55px;
@@ -36,6 +42,22 @@
 }
 
 #recipe-images {
+	min-width: 100px;
 	width: 250px;
-	height: 250px;
+/*	height: 200px;*/
+	border-radius: 10px;
 }
+
+#recipes {
+	margin-top: 30px;
+	width: 75%;
+	/*display: inline-grid;*/
+	flex-wrap: wrap;
+	position: relative;
+	flex-direction: row;
+}
+
+.modal-content p {
+	text-align: left;
+}
+

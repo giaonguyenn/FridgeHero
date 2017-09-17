@@ -1,11 +1,56 @@
 <section class="input-page">
-	<div class="input-field" id="home-input">
-	    <h3>What are we cooking with?</h3>
-	    <input ng-class="{redBorder:tryAgain}" type="text" id="searchTerm1" ng-model="searchTerm1" ng-change="enableButton()" placeholder="Ingredient 1">
-		<input type="text" id="searchTerm2" ng-model="searchTerm2" placeholder="Ingredient 2">
-		<input type="text" id="searchTerm3" ng-model="searchTerm3" placeholder="Ingredient 3">
-		</br>
-		<button type="button" id="letsCookButton" ng-click="getRecipes(searchTerm1,searchTerm2,searchTerm3)">Let's Cook!</button>
-	</div>
+	<h3>What are we cooking with?</h3>
+	<div class="input-field-background">
+	<!-- 	<div class="input-field"> -->
+<!-- 		    <input type="text" id="searchTerm1" ng-model="searchTerm1" placeholder="Ingredient 1"> -->
+<!-- 			<input type="text" id="searchTerm2" ng-model="searchTerm2" placeholder="Ingredient 2">
+			<input type="text" id="searchTerm3" ng-model="searchTerm3" placeholder="Ingredient 3">
+			</br> -->
 
+		<div class="row">
+		    <form class="col s12">
+		    	<div class="row">
+			    	<div class="input-field col s4">
+			        	<input id="searchTerm1" type="text" ng-model="searchTerm1">
+			        	<label for="searchTerm1">Ingredient 1</label>
+			        </div>
+			        <div class="input-field col s4">
+			        	<input id="searchTerm2" type="text" ng-model="searchTerm2">
+			        	<label for="searchTerm2">Ingredient 2</label>
+			        </div>
+			        <div class="input-field col s4">
+			        	<input id="searchTerm3" type="text" ng-model="searchTerm3">
+			        	<label for="searchTerm3">Ingredient 3</label>
+			        </div>
+			    </div>
+		    </form>
+	  	</div>
+
+	  	<p>Click to add more</p>
+		<i class="small material-icons" id="showMoreButton" ng-click="showMore()">add_circle</i>
+
+		<div class="row, additional-input">
+		    <form class="col s12">
+		    	<div class="row">
+			    	<div class="input-field col s4">
+			        	<input id="searchTerm4" type="text" ng-model="searchTerm4">
+			        	<label for="searchTerm4">Ingredient 4</label>
+			        </div>
+			        <div class="input-field col s4">
+			        	<input id="searchTerm5" type="text" ng-model="searchTerm5">
+			        	<label for="searchTerm5">Ingredient 5</label>
+			        </div>
+			        <div class="input-field col s4">
+			        	<input id="searchTerm6" type="text" ng-model="searchTerm6">
+			        	<label for="searchTerm6">Ingredient 6</label>
+			        </div>
+			    </div>
+		    </form>
+	  	</div>
+
+			</br>
+
+			<button class="waves-effect waves-light btn" type="button" id="letsCookButton" ng-click="getRecipes(searchTerm1,searchTerm2,searchTerm3,searchTerm4,searchTerm5,searchTerm6)">Let's Cook!</button>
+		</div>
+	</div>
 </section>
