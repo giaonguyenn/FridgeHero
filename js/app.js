@@ -5,20 +5,20 @@ angular.module("app", ["ui.router"])
 		$stateProvider
 			.state("home", {
 				url: "/",
-				templateUrl: "./views/home.html",
+				templateUrl: "/views/home.html",
 				controller: "mainCtrl"
 			})
 			.state("randomGenerator", {
 				url: "/randomGenerator",
-				templateUrl: "./views/randomGenerator.html",
+				templateUrl: "/views/randomGenerator.html",
 			})
 			.state("about", {
 				url: "/about",
-				templateUrl: "./views/about.html"
+				templateUrl: "/views/about.html"
 			})
 			.state("recipes", {
 				url: "/recipes",
-				templateUrl: "./views/recipes.html",
+				templateUrl: "/views/recipes.html",
 				controller: "recipesCtrl"
 			})
 	});
