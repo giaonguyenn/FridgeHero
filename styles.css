@@ -50,16 +50,24 @@ li:hover {
 	border-bottom: 2px solid #59CFC9;
 }
 
-/*#slideshow, img.bgM {
-  min-height: 100%;
-  min-width: 900px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index:-9999;
-}*/
+.navbar .responsiveIcons {
+	display: none;
+}
+
+#menu-icon {
+	margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+	.navbar ul {
+		display: none;
+	}
+	.navbar .responsiveIcons {
+		display: initial;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
 
 section {
 	width: 100%;
@@ -69,11 +77,13 @@ section {
 
 footer {
 	position: absolute;
-	bottom: 0px;
-	color: black;
-	opacity: .6;
+	bottom: -47%;
 	width: 100%;
 	text-align: right;
-	margin-top: -50px;
 	padding-right: 20px;
+}
+
+footer p {
+	color: white;
+	text-shadow: 1.5px 1.5px #58585a
 }

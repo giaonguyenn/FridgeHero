@@ -48,8 +48,7 @@ angular.module('app').controller('recipesCtrl', function($scope, mainSrvc,$timeo
 				$("#ingredients").append("<p>"+ cur +"</p>");	
 			});
 		});
-		$("#images").empty();
-			
+		$("#modalImages").attr("src", recipe.image_url);
 		$("#source_url").attr("href", recipe.source_url);
 	};
 });
