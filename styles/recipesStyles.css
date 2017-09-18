@@ -20,6 +20,11 @@
 	display: none;
 }
 
+#noMatchesMessage img {
+	border-radius: 50%;
+	border: 2px dashed #59CFC9;
+}
+
 #new-search {
 	position: fixed;
 	margin-left: -20px;
