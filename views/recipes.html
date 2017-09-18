@@ -5,14 +5,14 @@
   	</div>
 
 	<div id="noMatchesMessage">
-		<p>"No recipes found for
+		<p>No recipes found for
 		<span ng-show="show && first"><i>{{first}}</i></span>
 		<span ng-show="second && show">, <i>{{second}}</i></span>
 		<span ng-show="third && show">, <i>{{third}}</i></span>
 		<span ng-show="fourth && show">, <i>{{fourth}}</i></span>
 		<span ng-show="fifth && show">, <i>{{fifth}}</i></span>
 		<span ng-show="sixth && show">, <i>{{sixth}}</i></span>
-		. Please try again or order from your nearest Dominoes."</p>
+		. Please try again or order from your nearest Dominoes.</p>
 		<img src="https://media.giphy.com/media/ETTzs1c6mS36g/giphy.gif" alt="hamster eating pizza"/>
 	</div>
 
@@ -29,9 +29,9 @@
 		<span ng-show="sixth && show">, <i>{{sixth}}</i></span></p>
 	</div>
 
-	<div class="row" id="recipes">
+	<div class="row" id="recipes" >
 		<div ng-show="show" class="recipe-display" ng-repeat="recipe in recipes">
-			<div class="col s4">
+			<div class="col s4" id="recipeGrid">
 				{{recipe.title}} </br>
 				<a ng-click="selectRecipe(recipe)" class="waves-effect waves-light">
 					<img id="recipe-images" ng-src={{recipe.image_url}}></a>
@@ -42,11 +42,14 @@
 	<div id="modal1" class="modal">
     	<div class="modal-content">
       		<h4 id="title"></h4>
-      		<p id="ingredients"></p>
-      		<img src="" id="images"/>
+      		<div class="modal-main-section">
+	      		<p id="ingredients"></p>
+	      		<img id="modalImages" src=""/>
+	      	</div>
     	</div>
     	<div class="modal-footer">
       		<a class="modal-action modal-close waves-effect waves-green btn-flat" id="source_url" target="_blank">Get to Cooking!</a>
+      		<a ng-click="addFavorites">Add to Favorites</a>
     	</div>
   	</div>
 	

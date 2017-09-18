@@ -23,6 +23,7 @@
 #noMatchesMessage img {
 	border-radius: 50%;
 	border: 2px dashed #59CFC9;
+	max-width: 100%;
 }
 
 #new-search {
@@ -44,25 +45,30 @@ i {
 	position: relative;
 	top: 55px;
 	z-index: 1;
+	text-align: center;
 }
 
 #recipe-images {
 	min-width: 100px;
 	width: 250px;
-/*	height: 200px;*/
 	border-radius: 10px;
 }
 
-#recipes {
-	margin-top: 30px;
-	width: 75%;
-	/*display: inline-grid;*/
-	flex-wrap: wrap;
-	position: relative;
-	flex-direction: row;
+#recipeGrid {
+	min-width: 255px;
 }
 
 .modal-content p {
 	text-align: left;
+}
+
+.modal-main-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.modal-main-section img {
+	border-radius: 7px;
 }
 
