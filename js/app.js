@@ -21,4 +21,8 @@ angular.module("app", ["ui.router"])
 				templateUrl: "views/recipes.html",
 				controller: "recipesCtrl"
 			})
+			.state("view", {
+				url: "/view",
+				templateUrl: "views/view.html",
+			})
 	});
