@@ -1,5 +1,5 @@
 angular.module("app").service("mainSrvc", function($http) {
-	var baseUrl = "http://food2fork.com/api/";
+	var baseUrl = "https://food2fork.com/api/";
 	var apiKey = "4cc8742059649d4518b7105ffb4dc984";
 
 	var results=[];
