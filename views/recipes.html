@@ -32,9 +32,9 @@
 	<div class="row" id="recipes" >
 		<div ng-show="show" class="recipe-display" ng-repeat="recipe in recipes">
 			<div class="col s4" id="recipeGrid">
-				<span id="recipe_title">{{recipe.title}}</span> </br>
+				<div class="title-container"><span id="recipe_title">{{recipe.title}}</span>
 				<a ng-click="selectRecipe(recipe)" class="waves-effect waves-light">
-					<img id="recipe-images" ng-src={{recipe.image_url}}></a>
+					<img id="recipe-images" ng-src={{recipe.image_url}}></a></div>
 			</div>
 		</div>
 	</div>

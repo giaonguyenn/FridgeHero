@@ -1,6 +1,7 @@
 #recipes-section {
 	background-image: url("https://i.imgur.com/spe42c2.png");
 	background-position: center;
+	padding-top: 40px;
 }
 
 .loading {
@@ -62,9 +63,17 @@ i {
 	text-align: center;
 }
 
+.title-container {
+	padding: 5px;
+	background-color: rgba(255, 255, 255, .6);
+	border-radius: 5px;
+	width: 270px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
 #recipe_title {
-	color: white;
-	text-shadow: 1px 1px #58585a
+	color: #58585a;
 }
 
 #recipe-images {
@@ -86,11 +95,17 @@ i {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-top: 3%;
+}
+
+.modal-main-section #ingredients {
+	width: 38%;
 }
 
 .modal-main-section img {
 	border-radius: 7px;
 	border: 2px solid #58585a;
+	width: 62%;
 }
 
 .modal-footer a:hover {
@@ -98,4 +113,3 @@ i {
 	border-top: 2px solid #59CFC9;
 	border-bottom: 2px solid #59CFC9;
 }
-
